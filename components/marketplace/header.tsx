@@ -27,7 +27,7 @@ export function MarketplaceHeader() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Sprout className="w-6 h-6 text-primary" />
-            <span className="font-bold text-lg text-foreground hidden sm:inline">AgriBridge</span>
+            <span className="font-bold text-lg text-foreground hidden sm:inline">MavunoFresh</span>
           </Link>
 
           {/* Desktop Navigation */}
