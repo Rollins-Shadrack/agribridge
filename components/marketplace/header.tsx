@@ -7,8 +7,9 @@ import { useAuth } from "@/lib/auth-context";
 import { useCart } from "@/lib/cart-context";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
-import { Sprout, ShoppingCart, User, LogOut, Menu, X } from "lucide-react";
+import { ShoppingCart, User, LogOut, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function MarketplaceHeader() {
   const router = useRouter();
@@ -26,8 +27,7 @@ export function MarketplaceHeader() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Sprout className="w-6 h-6 text-primary" />
-            <span className="font-bold text-lg text-foreground hidden sm:inline">MavunoFresh</span>
+          <Image src="/logo.png" alt="rollinscodes.com" width={70} height={70}  />
           </Link>
 
           {/* Desktop Navigation */}

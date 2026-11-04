@@ -30,12 +30,14 @@ const item = {
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const year = new Date().getFullYear();
 
   const categories = [
     { id: "avocados", name: "Avocados", icon: "🥑" },
     { id: "vegetables", name: "Vegetables", icon: "🥬" },
     { id: "fruits", name: "Fruits", icon: "🍎" },
     { id: "organic", name: "Organic", icon: "🌿" },
+    { id: "grains", name: "Grains", icon: "🥬" },
   ];
 
   // Get featured products (first 8)
@@ -230,7 +232,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-lg mb-4">AgriBridge</h3>
+              <h3 className="font-bold text-lg mb-4">MavunoFresh</h3>
               <p className="text-sm text-muted-foreground">Connecting farmers directly with consumers for fresh, sustainable produce.</p>
             </div>
             <div>
@@ -295,7 +297,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground">© 2026 AgriBridge. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© {year} MavunoFresh. All rights reserved.</p>
             <div className="flex gap-4 mt-4 sm:mt-0">
               <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 Twitter

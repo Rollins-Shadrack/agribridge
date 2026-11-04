@@ -52,13 +52,13 @@ export function ProductCard({ product, vendor, vendorName, vendorVerified }: Pro
       transition={{ duration: 0.3 }}
     >
       <Link href={`/marketplace/product/${product.id}`}>
-        <Card className="h-full overflow-hidden hover:border-primary/50 transition-colors cursor-pointer group">
+        <div className="h-full overflow-hidden hover:border-primary/50 transition-colors cursor-pointer group">
           {/* Image */}
           <div className="relative overflow-hidden bg-muted h-48">
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full rounded-md object-cover group-hover:scale-105 transition-transform duration-300"
             />
             {product.certification && (
               <div className="absolute top-3 right-3 bg-primary text-primary-foreground px-2 py-1 rounded text-xs font-semibold">
@@ -110,7 +110,7 @@ export function ProductCard({ product, vendor, vendorName, vendorVerified }: Pro
               Add to Cart
             </Button>
           </CardContent>
-        </Card>
+        </div>
       </Link>
     </motion.div>
   );

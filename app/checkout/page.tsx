@@ -18,15 +18,12 @@ type CheckoutStep = "delivery" | "payment" | "confirmation";
 export default function CheckoutPage() {
   const router = useRouter();
   const { items, totalPrice, clearCart } = useCart();
-  const { user } = useAuth();
-  const [step, setStep] = useState<CheckoutStep>("payment");
-
-  // Delivery form state
+  const [step, setStep] = useState<CheckoutStep>("delivery");
   const [deliveryData, setDeliveryData] = useState({
     address: "",
     phone: "",
     date: "",
-    time: "morning", // morning, afternoon, evening
+    time: "morning",
     notes: "",
   });
 
@@ -48,7 +45,6 @@ export default function CheckoutPage() {
   }
 
   const calculateSubtotal = () => {
-    // In a real app, this would be calculated from actual product prices
     return totalPrice;
   };
 
