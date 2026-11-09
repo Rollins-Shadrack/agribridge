@@ -45,8 +45,8 @@ export default function CheckoutPage() {
   const [orderId, setOrderId] = useState<string | null>(null);
 
   const subtotal = totalPrice;
-  const tax = Math.round(subtotal * 0.096 * 100) / 100;
-  const deliveryFee = 5.0;
+  const tax = Math.round(subtotal * 0.16 * 100) / 100;
+  const deliveryFee = 100.0;
   const grandTotal = subtotal + tax + deliveryFee;
 
   // Use local date rather than UTC to avoid date discrepancies.
