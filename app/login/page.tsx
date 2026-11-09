@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Users, Sprout} from "lucide-react";
 import Link from "next/link";
 import LoginButton from "@/components/auth-button";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,8 +38,10 @@ export default function LoginPage() {
         {/* Header */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Sprout className="w-8 h-8 text-primary" />
-            <h1 className="text-4xl font-bold text-foreground">AgriBridge</h1>
+            <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <Image src="/logo.png" alt="rollinscodes.com" width={70} height={70}  />
+          </Link>
+            <h1 className="text-4xl font-bold text-foreground">MavunoFresh</h1>
           </div>
           <p className="text-lg text-muted-foreground">Connect directly with local farmers for fresh produce</p>
         </motion.div>
