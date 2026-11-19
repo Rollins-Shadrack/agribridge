@@ -42,7 +42,7 @@ export default function Home() {
 
   // Get featured products (first 8)
   const featuredProducts = useMemo(() => {
-    return mockProducts.slice(0, 8).filter((product) => {
+    return mockProducts.filter((product) => {
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || product.description.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = !selectedCategory || product.category === selectedCategory;
       return matchesSearch && matchesCategory;
