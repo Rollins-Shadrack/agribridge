@@ -62,12 +62,6 @@ export default function Home() {
           {/* Hero Content */}
           <motion.div className="md:col-span-3 space-y-8 my-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="space-y-4">
-              <motion.div className="inline-block" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
-                <Badge className="gap-2 px-4 py-2 text-sm">
-                  <Leaf className="w-4 h-4" />
-                  Farm Fresh & Direct
-                </Badge>
-              </motion.div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
                 Fresh Produce,
