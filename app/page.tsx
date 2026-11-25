@@ -10,6 +10,7 @@ import { mockProducts } from "@/lib/data/products";
 import { mockVendors } from "@/lib/data/vendors";
 import { Search, Leaf, TrendingUp, Award, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const container = {
   hidden: { opacity: 0 },
@@ -56,59 +57,100 @@ export default function Home() {
       <MarketplaceHeader />
 
       {/* Hero Section */}
-      <motion.section className="relative bg-linear-to-br from-primary/10 via-primary/5 to-background overflow-hidden py-20 md:py-32" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-        </div>
+      <motion.section className="relative overflow-hidden border-b border-border/40 bg-linear-to-b from-background via-background to-muted/20 py-16 sm:py-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-8">
+          {/* Hero Content */}
+          <motion.div className="md:col-span-3 space-y-8 my-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <div className="space-y-4">
+              <motion.div className="inline-block" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
+                <Badge className="gap-2 px-4 py-2 text-sm">
+                  <Leaf className="w-4 h-4" />
+                  Farm Fresh & Direct
+                </Badge>
+              </motion.div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div className="text-center space-y-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <motion.div className="inline-block" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }}>
-              <Badge className="gap-2 px-4 py-2 text-base">
-                <Leaf className="w-4 h-4" />
-                Farm Fresh & Direct
-              </Badge>
-            </motion.div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
+                Fresh Produce,
+                <span className="text-primary block">Straight from Farmers</span>
+              </h1>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-balance">
-              Fresh Produce,
-              <span className="text-primary block">Straight from Farmers</span>
-            </h1>
+              <p className="text-foreground/70 text-sm sm:text-base max-w-xl">Discover premium quality avocados, vegetables, and fruits from local farmers. Support sustainable agriculture while enjoying the freshest produce delivered to your door.</p>
+            </div>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-balance">Discover premium quality avocados, vegetables, and fruits from local farmers. Support sustainable agriculture while enjoying the freshest produce delivered to your door.</p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
               <Button size="lg" className="gap-2" asChild>
                 <Link href="#products">
                   <Zap className="w-5 h-5" />
                   Shop Now
                 </Link>
               </Button>
+
               <Button size="lg" variant="outline">
                 Learn About Farmers
               </Button>
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-border">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-border">
               <motion.div variants={item} className="space-y-2">
-                <Award className="w-8 h-8 text-primary mx-auto" />
+                <Award className="w-7 h-7 text-primary" />
                 <p className="font-semibold">100% Fresh</p>
-                <p className="text-sm text-muted-foreground">Harvested within 24 hours</p>
+                <p className="text-xs text-muted-foreground">Harvested within 24 hours</p>
               </motion.div>
+
               <motion.div variants={item} className="space-y-2">
-                <TrendingUp className="w-8 h-8 text-primary mx-auto" />
+                <TrendingUp className="w-7 h-7 text-primary" />
                 <p className="font-semibold">Fair Prices</p>
-                <p className="text-sm text-muted-foreground">Direct from farm to you</p>
+                <p className="text-xs text-muted-foreground">Direct from farm to you</p>
               </motion.div>
+
               <motion.div variants={item} className="space-y-2">
-                <Leaf className="w-8 h-8 text-primary mx-auto" />
+                <Leaf className="w-7 h-7 text-primary" />
                 <p className="font-semibold">Sustainable</p>
-                <p className="text-sm text-muted-foreground">Support local farmers</p>
+                <p className="text-xs text-muted-foreground">Support local farmers</p>
               </motion.div>
             </div>
           </motion.div>
+
+          {/* Image Mosaic */}
+          <div className="space-y-1 md:col-span-2">
+            <div className="flex space-x-1 items-stretch">
+              <div className="w-7/12">
+                <Image src="/hero.jpg" width={446} height={446} alt="Fresh farm produce" className="object-cover h-72 w-full rounded-xl" />
+              </div>
+
+              <div className="w-5/12 self-end space-y-1">
+                <div className="grid grid-cols-2 gap-1">
+                  <div>
+                    <Image src="/hero2.jpg" width={437} height={437} alt="Fresh vegetables" className="object-cover h-24 w-full rounded-xl" />
+                  </div>
+
+                  <div className="bg-primary rounded-xl rounded-tr-[100px]" />
+                </div>
+
+                <Image src="/hero4.jpg" width={374} height={100} alt="Farm fresh fruits" className="object-cover w-full h-48 rounded-xl" />
+              </div>
+            </div>
+
+            <div className="flex space-x-1">
+              <div className="w-5/12 self-end space-y-1">
+                <Image src="/hero5.jpg" width={374} height={392} alt="Freshly harvested produce" className="object-cover w-full h-48 rounded-xl" />
+
+                <div className="grid grid-cols-2 gap-1">
+                  <div className="bg-primary rounded-xl rounded-bl-[100px]" />
+
+                  <div>
+                    <Image src="/hero1.jpg" alt="Fresh agricultural produce" width={394} height={394} className="object-cover w-full h-24 rounded-xl" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="w-7/12">
+                <Image src="/hero3.png" width={446} height={446} alt="Farmers and fresh produce" className="object-cover w-full h-72 rounded-xl" />
+              </div>
+            </div>
+          </div>
         </div>
       </motion.section>
 
@@ -119,13 +161,7 @@ export default function Home() {
             {/* Search Bar */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <input
-                type="text"
-                placeholder="Search for products, farmers..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
-              />
+              <input type="text" placeholder="Search for products, farmers..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
             </div>
 
             {/* Category Filters */}
@@ -134,11 +170,7 @@ export default function Home() {
                 All Products
               </button>
               {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full whitespace-nowrap font-medium transition-all gap-2 flex items-center ${selectedCategory === cat.id ? "bg-primary text-primary-foreground" : "bg-muted hover:bg-muted/80 text-foreground"}`}
-                >
+                <button key={cat.id} onClick={() => setSelectedCategory(cat.id)} className={`px-4 py-2 rounded-full whitespace-nowrap font-medium transition-all gap-2 flex items-center ${selectedCategory === cat.id ? "bg-primary text-primary-foreground" : "bg-muted hover:bg-muted/80 text-foreground"}`}>
                   <span>{cat.icon}</span>
                   {cat.name}
                 </button>
