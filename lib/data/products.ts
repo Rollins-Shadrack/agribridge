@@ -130,7 +130,7 @@ export const mockProducts: Product[] = [
     category: "vegetables",
     vendorId: "vendor-1",
     quantity: 200,
-    unit: "piece",
+    unit: "kg",
     createdAt: "2026-10-27",
   },
 ];
