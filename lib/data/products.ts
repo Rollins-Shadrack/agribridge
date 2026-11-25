@@ -34,7 +34,7 @@ export const mockProducts: Product[] = [
     category: "vegetables",
     vendorId: "vendor-1",
     quantity: 0,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
   {
@@ -70,7 +70,7 @@ export const mockProducts: Product[] = [
     category: "grains",
     vendorId: "vendor-1",
     quantity: 0,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
   {
@@ -82,7 +82,7 @@ export const mockProducts: Product[] = [
     category: "fruits",
     vendorId: "vendor-1",
     quantity: 200,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
   {
@@ -94,7 +94,7 @@ export const mockProducts: Product[] = [
     category: "fruits",
     vendorId: "vendor-1",
     quantity: 400,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
   {
@@ -106,7 +106,7 @@ export const mockProducts: Product[] = [
     category: "fruits",
     vendorId: "vendor-1",
     quantity: 200,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
   {
@@ -118,7 +118,7 @@ export const mockProducts: Product[] = [
     category: "vegetables",
     vendorId: "vendor-1",
     quantity: 0,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
   {
@@ -130,7 +130,7 @@ export const mockProducts: Product[] = [
     category: "vegetables",
     vendorId: "vendor-1",
     quantity: 200,
-    unit: "kg",
+    unit: "piece",
     createdAt: "2026-10-27",
   },
 ];
