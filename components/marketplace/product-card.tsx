@@ -28,10 +28,6 @@ export function ProductCard({ product, vendor, vendorName, vendorVerified }: Pro
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     
-    if (!user || user.role !== 'buyer') {
-      router.push('/login');
-      return;
-    }
 
     addItem({
       productId: product.id,
@@ -74,7 +70,7 @@ export function ProductCard({ product, vendor, vendorName, vendorVerified }: Pro
             <div className="flex items-center gap-1 mb-2">
               <p className="text-sm text-muted-foreground">{displayVendorName}</p>
               {displayVendorVerified && (
-                <BadgeCheck className="w-4 h-4 text-primary flex-shrink-0" />
+                <BadgeCheck className="w-4 h-4 text-primary shrink-0" />
               )}
             </div>
 
