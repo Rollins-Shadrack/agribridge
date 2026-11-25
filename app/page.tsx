@@ -266,6 +266,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">MavunoFresh</h3>
               <p className="text-sm text-muted-foreground">Connecting farmers directly with consumers for fresh, sustainable produce.</p>
+              <p className="text-sm text-muted-foreground">info@mavunofresh.co.ke</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
