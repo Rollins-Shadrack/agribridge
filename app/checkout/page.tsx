@@ -81,7 +81,7 @@ export default function CheckoutPage() {
       evening: "Evening (5 PM - 8 PM)",
     };
 
-    return ["🛒 *NEW MARKETPLACE ORDER*", "━━━━━━━━━━━━━━━━━━━━", "", `📦 *Order Reference:* ${reference}`, "", "👤 *CUSTOMER DETAILS*", `Name: ${deliveryData.fullName}`, `Phone: ${deliveryData.phone}`, "", "📍 *DELIVERY DETAILS*", `Address: ${deliveryData.address}`, `Date: ${deliveryData.date}`, `Preferred Time: ${timeLabels[deliveryData.time] || deliveryData.time}`, `Notes: ${deliveryData.notes || "None"}`, "", "🛍️ *ORDER ITEMS*", "━━━━━━━━━━━━━━━━━━━━", productDetails, "", "💰 *ORDER SUMMARY*", `Subtotal: ${formatKES(subtotal)}`, `Tax (9.6%): ${formatKES(tax)}`, `Delivery Fee: ${formatKES(deliveryFee)}`, "━━━━━━━━━━━━━━━━━━━━", `*GRAND TOTAL: ${formatKES(grandTotal)}*`, "━━━━━━━━━━━━━━━━━━━━", "", "Please confirm availability and arrange payment with the customer.", "", "Sent from the Mavuno Fresh Marketplace."].join("\n");
+    return ["🛒 *NEW MARKETPLACE ORDER*", "━━━━━━━━━━━━━━━━━━━━", "", `📦 *Order Reference:* ${reference}`, "", "👤 *CUSTOMER DETAILS*", `Name: ${deliveryData.fullName}`, `Phone: ${deliveryData.phone}`, "", "📍 *DELIVERY DETAILS*", `Address: ${deliveryData.address}`, `Date: ${deliveryData.date}`, `Preferred Time: ${timeLabels[deliveryData.time] || deliveryData.time}`, `Notes: ${deliveryData.notes || "None"}`, "", "🛍️ *ORDER ITEMS*", "━━━━━━━━━━━━━━━━━━━━", productDetails, "", "💰 *ORDER SUMMARY*", `Subtotal: ${formatKES(subtotal)}`, `Tax (9.6%): ${formatKES(tax)}`, `Delivery Fee: ${formatKES(deliveryFee)}`, "━━━━━━━━━━━━━━━━━━━━", `*GRAND TOTAL: ${formatKES(grandTotal)}*`, "━━━━━━━━━━━━━━━━━━━━"].join("\n");
   };
 
   const handlePlaceOrder = (event: FormEvent<HTMLFormElement>) => {
