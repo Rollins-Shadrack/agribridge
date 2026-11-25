@@ -117,7 +117,7 @@ export default function Home() {
           <div className="space-y-1 md:col-span-2">
             <div className="flex space-x-1 items-stretch">
               <div className="w-7/12">
-                <Image src="/hero.jpeg" width={446} height={446} alt="Fresh farm produce" className="object-cover h-72 w-full rounded-xl" />
+                <Image src="/hero6.jpeg" width={446} height={446} alt="Fresh farm produce" className="object-cover h-72 w-full rounded-xl" />
               </div>
 
               <div className="w-5/12 self-end space-y-1">
@@ -147,7 +147,7 @@ export default function Home() {
               </div>
 
               <div className="w-7/12">
-                <Image src="/hero3.png" width={446} height={446} alt="Farmers and fresh produce" className="object-cover w-full h-72 rounded-xl" />
+                <Image src="/hero3.jpeg" width={446} height={446} alt="Farmers and fresh produce" className="object-cover w-full h-72 rounded-xl" />
               </div>
             </div>
           </div>
