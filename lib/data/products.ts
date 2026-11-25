@@ -34,7 +34,7 @@ export const mockProducts: Product[] = [
     category: "vegetables",
     vendorId: "vendor-1",
     quantity: 0,
-    unit: "piece",
+    unit: "kg",
     createdAt: "2026-10-27",
   },
   {
@@ -70,7 +70,7 @@ export const mockProducts: Product[] = [
     category: "grains",
     vendorId: "vendor-1",
     quantity: 0,
-    unit: "piece",
+    unit: "kg",
     createdAt: "2026-10-27",
   },
   {
