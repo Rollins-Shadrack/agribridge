@@ -71,7 +71,7 @@ export default function Home() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div className="flex flex-wrap gap-4 items-start">
               <Button size="lg" className="gap-2" asChild>
                 <Link href="#products">
                   <Zap className="w-5 h-5" />
