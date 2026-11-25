@@ -62,7 +62,6 @@ export default function Home() {
           {/* Hero Content */}
           <motion.div className="md:col-span-3 space-y-8 my-auto" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="space-y-4">
-
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-balance">
                 Fresh Produce,
                 <span className="text-primary block">Straight from Farmers</span>
@@ -86,20 +85,20 @@ export default function Home() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-border">
-              <motion.div variants={item} className="space-y-2">
+            <div className="flex flex-wrap gap-6 pt-6 border-t border-border">
+              <motion.div variants={item} className="flex-1 min-w-35 space-y-2">
                 <Award className="w-7 h-7 text-primary" />
                 <p className="font-semibold">100% Fresh</p>
                 <p className="text-xs text-muted-foreground">Harvested within 24 hours</p>
               </motion.div>
 
-              <motion.div variants={item} className="space-y-2">
+              <motion.div variants={item} className="flex-1 min-w-35 space-y-2">
                 <TrendingUp className="w-7 h-7 text-primary" />
                 <p className="font-semibold">Fair Prices</p>
                 <p className="text-xs text-muted-foreground">Direct from farm to you</p>
               </motion.div>
 
-              <motion.div variants={item} className="space-y-2">
+              <motion.div variants={item} className="flex-1 min-w-35 space-y-2">
                 <Leaf className="w-7 h-7 text-primary" />
                 <p className="font-semibold">Sustainable</p>
                 <p className="text-xs text-muted-foreground">Support local farmers</p>
