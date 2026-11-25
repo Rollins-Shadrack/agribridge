@@ -8,10 +8,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { ChevronLeft, Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
+import { useAuth } from '@/lib/auth-context';
 
 export default function CartPage() {
   const router = useRouter();
   const { items, removeItem, updateQuantity, clearCart, totalPrice, totalItems } = useCart();
+  const { user } = useAuth();
 
   // Group items by vendor
   const itemsByVendor = items.reduce((acc, item) => {
@@ -23,7 +25,10 @@ export default function CartPage() {
   }, {} as Record<string, typeof items>);
 
   const handleCheckout = () => {
-    if (items.length > 0) {
+    if (!user || user.role !== 'buyer') {
+      router.push('/login');
+      return;
+    }else if (items.length > 0) {
       router.push('/checkout');
     }
   };

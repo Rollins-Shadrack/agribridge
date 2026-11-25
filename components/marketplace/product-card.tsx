@@ -1,14 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { Product, Vendor } from '@/lib/types';
-import { Card, CardContent } from '@/components/ui/card';
+import {  CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Star, BadgeCheck } from 'lucide-react';
+import { ShoppingCart,  BadgeCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useCart } from '@/lib/cart-context';
-import { useAuth } from '@/lib/auth-context';
 
 interface ProductCardProps {
   product: Product;
@@ -18,9 +16,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, vendor, vendorName, vendorVerified }: ProductCardProps) {
-  const router = useRouter();
   const { addItem } = useCart();
-  const { user } = useAuth();
+  
 
   const displayVendorName = vendor?.name || vendorName || 'Unknown Vendor';
   const displayVendorVerified = vendor?.verified ?? vendor?.isVerified ?? vendorVerified ?? false;
@@ -75,12 +72,12 @@ export function ProductCard({ product, vendor, vendorName, vendorVerified }: Pro
             </div>
 
             {/* Product Name */}
-            <h3 className="font-semibold text-foreground mb-2 line-clamp-2 min-h-[2.5rem]">
+            <h3 className="font-semibold text-foreground mb-2 line-clamp-2 min-h-10">
               {product.name}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-muted-foreground mb-3 line-clamp-2 min-h-[2.5rem]">
+            <p className="text-sm text-muted-foreground mb-3 line-clamp-2 min-h-10">
               {product.description}
             </p>
 

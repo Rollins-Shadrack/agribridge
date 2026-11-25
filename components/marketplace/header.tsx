@@ -27,7 +27,7 @@ export function MarketplaceHeader() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <Image src="/logo.png" alt="rollinscodes.com" width={70} height={70}  />
+            <Image src="/logo.png" alt="rollinscodes.com" width={70} height={70} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -59,17 +59,14 @@ export function MarketplaceHeader() {
 
           {/* Right Side */}
           <div className="flex items-center gap-4">
-            {/* Cart - Only show when logged in as buyer */}
-            {user?.role === "buyer" && (
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-                <Link href="/cart" className="relative">
-                  <Button variant="ghost" size="icon">
-                    <ShoppingCart className="w-5 h-5" />
-                  </Button>
-                  {totalItems > 0 && <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">{totalItems}</span>}
-                </Link>
-              </motion.div>
-            )}
+            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+              <Link href="/cart" className="relative">
+                <Button variant="ghost" size="icon">
+                  <ShoppingCart className="w-5 h-5" />
+                </Button>
+                {totalItems > 0 && <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">{totalItems}</span>}
+              </Link>
+            </motion.div>
 
             {/* User Menu or Login Button */}
             {user ? (

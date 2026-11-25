@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Users, Sprout} from "lucide-react";
+import { Users} from "lucide-react";
 import Link from "next/link";
 import LoginButton from "@/components/auth-button";
 import Image from "next/image";
