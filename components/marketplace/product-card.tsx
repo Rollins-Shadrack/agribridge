@@ -88,7 +88,7 @@ export function ProductCard({ product, vendor, vendorName, vendorVerified }: Pro
                 <p className="text-xs text-muted-foreground">per {product.unit}</p>
               </div>
               <div className="text-right">
-                <p className="text-xs text-muted-foreground">In stock</p>
+                <p className="text-xs text-muted-foreground">{product.quantity > 0 ? "In Stock": "Out of Stock"}</p>
                 <p className="text-sm font-semibold text-primary">{product.quantity} available</p>
               </div>
             </div>
