@@ -35,11 +35,11 @@ export function MarketplaceHeader() {
             <Link href="/" className="text-sm text-foreground hover:text-primary transition-colors font-medium">
               Browse
             </Link>
-            {user?.role === "buyer" && (
+            {/* {user?.role === "buyer" && (
               <Link href="/orders" className="text-sm text-foreground hover:text-primary transition-colors font-medium">
                 My Orders
               </Link>
-            )}
+            )} */}
             {user?.role === "farmer" && (
               <>
                 <Link href="/farmer/dashboard" className="text-sm text-foreground hover:text-primary transition-colors font-medium">
