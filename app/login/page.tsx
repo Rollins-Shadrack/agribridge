@@ -47,7 +47,7 @@ export default function LoginPage() {
         </motion.div>
 
         {/* Role Selection */}
-          <motion.div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" variants={itemVariants}>
+          <motion.div className="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto" variants={itemVariants}>
             {/* Buyer Role */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-pointer">
               <Card className="h-full hover:border-primary/50 transition-colors">
@@ -64,7 +64,7 @@ export default function LoginPage() {
             </motion.div>
 
             {/* Farmer Role */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-pointer">
+            {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="cursor-pointer">
               <Card className="h-full hover:border-primary/50 transition-colors">
                 <CardHeader>
                   <Sprout className="w-10 h-10 text-primary mb-3" />
@@ -76,7 +76,7 @@ export default function LoginPage() {
                   <LoginButton role="farmer"/>
                 </CardContent>
               </Card>
-            </motion.div>
+            </motion.div> */}
 
             {/* Admin Role */}
             {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setSelectedRole("admin")} className="cursor-pointer">
