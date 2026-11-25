@@ -332,7 +332,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="flex justify-between text-sm">
-                  <span className="text-muted-foreground">Tax (9.6%)</span>
+                  <span className="text-muted-foreground">Tax (16%)</span>
 
                   <span>{formatKES(tax)}</span>
                 </div>
