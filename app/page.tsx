@@ -117,7 +117,7 @@ export default function Home() {
               <div className="w-5/12 self-end space-y-1">
                 <div className="grid grid-cols-2 gap-1">
                   <div>
-                    <Image src="/hero2.jpeg" width={437} height={437} alt="Fresh vegetables" className="object-cover h-24 w-full rounded-xl" />
+                    <Image src="/hero5.jpeg" width={437} height={437} alt="Fresh vegetables" className="object-cover h-24 w-full rounded-xl" />
                   </div>
 
                   <div className="bg-primary rounded-xl rounded-tr-[100px]" />
@@ -129,7 +129,7 @@ export default function Home() {
 
             <div className="flex space-x-1">
               <div className="w-5/12 self-end space-y-1">
-                <Image src="/hero5.jpeg" width={374} height={392} alt="Freshly harvested produce" className="object-cover w-full h-48 rounded-xl" />
+                <Image src="/hero2.jpeg" width={374} height={392} alt="Freshly harvested produce" className="object-cover w-full h-48 rounded-xl" />
 
                 <div className="grid grid-cols-2 gap-1">
                   <div className="bg-primary rounded-xl rounded-bl-[100px]" />
