@@ -29,11 +29,15 @@ export default function CallbackInner() {
         }),
       });
 
-      router.push("/");
+      if (role === "buyer") {
+        router.push("/checkout");
+      } else {
+        router.push("/");
+      }
     };
 
     run();
-  }, []);
+  }, [router, params]);
 
   return <div>Finalizing account...</div>;
 }
