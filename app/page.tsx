@@ -117,31 +117,31 @@ export default function Home() {
           <div className="space-y-1 md:col-span-2">
             <div className="flex space-x-1 items-stretch">
               <div className="w-7/12">
-                <Image src="/hero.jpg" width={446} height={446} alt="Fresh farm produce" className="object-cover h-72 w-full rounded-xl" />
+                <Image src="/hero.jpeg" width={446} height={446} alt="Fresh farm produce" className="object-cover h-72 w-full rounded-xl" />
               </div>
 
               <div className="w-5/12 self-end space-y-1">
                 <div className="grid grid-cols-2 gap-1">
                   <div>
-                    <Image src="/hero2.jpg" width={437} height={437} alt="Fresh vegetables" className="object-cover h-24 w-full rounded-xl" />
+                    <Image src="/hero2.jpeg" width={437} height={437} alt="Fresh vegetables" className="object-cover h-24 w-full rounded-xl" />
                   </div>
 
                   <div className="bg-primary rounded-xl rounded-tr-[100px]" />
                 </div>
 
-                <Image src="/hero4.jpg" width={374} height={100} alt="Farm fresh fruits" className="object-cover w-full h-48 rounded-xl" />
+                <Image src="/hero4.jpeg" width={374} height={100} alt="Farm fresh fruits" className="object-cover w-full h-48 rounded-xl" />
               </div>
             </div>
 
             <div className="flex space-x-1">
               <div className="w-5/12 self-end space-y-1">
-                <Image src="/hero5.jpg" width={374} height={392} alt="Freshly harvested produce" className="object-cover w-full h-48 rounded-xl" />
+                <Image src="/hero5.jpeg" width={374} height={392} alt="Freshly harvested produce" className="object-cover w-full h-48 rounded-xl" />
 
                 <div className="grid grid-cols-2 gap-1">
                   <div className="bg-primary rounded-xl rounded-bl-[100px]" />
 
                   <div>
-                    <Image src="/hero1.jpg" alt="Fresh agricultural produce" width={394} height={394} className="object-cover w-full h-24 rounded-xl" />
+                    <Image src="/hero1.jpeg" alt="Fresh agricultural produce" width={394} height={394} className="object-cover w-full h-24 rounded-xl" />
                   </div>
                 </div>
               </div>
